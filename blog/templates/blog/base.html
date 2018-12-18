@@ -18,6 +18,9 @@
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}">New Post</a>
                 <a href="{% url 'post_draft_list' %}">Draft</a>
+                <p>Hello {{user.username}} <a href="{% url 'logout' %}">logout</a></p>
+            {% else %}
+                <a href="{% url 'login' %}">login</a>
             {% endif %}
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
